@@ -209,13 +209,22 @@ main{
   font-size: 48px;
   font-weight: 400;
   margin-bottom: 50px;
+  white-space: nowrap;
+  border-right: 2px solid black;
+  max-width: 350px;
+  overflow: hidden;
+  animation: typing 2s steps(30) 0s forwards, blink-caret 0.75s step-end infinite;
 }
+
 
 .hero-text .first-p {
   font-size: 16px;
   line-height: 1.5;
   margin-right: 20px;
+  overflow: hidden;
+  animation: typing 2s steps(30) 0s forwards, blink-caret 0.75s step-end infinite;
 }
+
 
 .hero-text .make-bold {
   font-weight: 700;
@@ -226,6 +235,8 @@ main{
   margin-bottom: 20px;
   padding-right: 40px;
   line-height: 1.5;
+  overflow: hidden;
+  animation: typing 2s steps(30) 0s forwards, blink-caret 0.75s step-end infinite;
 }
 
 .language-logos img {
@@ -240,6 +251,7 @@ main{
   border-radius: 10px;
   margin-top: 30px;
   margin-bottom: 20px;
+  
 }
 
 .hero-text .my-projects-btn a {
@@ -267,7 +279,6 @@ main{
     padding: 0;
     margin-bottom: 50px;
   }
-
 
 }
 
@@ -335,10 +346,9 @@ main{
 }
 
 .window-content{
-  overflow: hidden;
   line-height: 2;
-  animation: typing 3s steps(40),
-             blink-caret 0.75s step-end infinite;
+  overflow: hidden;
+  animation: typing 2s steps(30) 0s forwards, blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -348,8 +358,9 @@ main{
 
 @keyframes blink-caret {
   from, to { border-color: transparent; }
-  50% { border-color: #000; }
+  50% { border-color: black; }
 }
+
 
 
 .projects{

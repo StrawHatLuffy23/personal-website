@@ -30,3 +30,4 @@ document.getElementById('hamburger-menu').addEventListener('click', function() {
     var dropdown = document.querySelector('.navbar .dropdown');
     dropdown.classList.toggle('active');
 });
+
