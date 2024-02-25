@@ -207,6 +207,12 @@
     text-align: center;
 }
 
+.JTBD-img{
+  display: flex;
+  justify-content: center;
+}
+
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     body {
