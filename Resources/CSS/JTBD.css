@@ -5,225 +5,40 @@
     color: black;
   }
   
-  body{
-    min-height: 100vh;
-    background: #f3f3f3; /* Color of the MacOS background */
-    margin: 0;
-    padding: 20px;
-  }
-  
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 32px 32px;
-    width: 100%;
-    box-sizing: border-box;
-    height: auto;
-    top: 0; /* Position at the top */
-    left: 0; /* Position at the left */
-    right: 0; /* Position at the right */
-    z-index: 999; /* Set a high z-index to ensure it's on top of other elements */
-  }
-  
-  .navbar .left-section {
-    display: flex;
-    align-items: center; /* Aligns items vertically center */
-  }
-  
-  .navbar .logo img {
-    display: flex;
-    height: 20px;
-  }
-  
-  .navbar .header-arash {
-    display: inline-block; /* Required for the positioning of the pseudo-element */
-    position: relative;
-    text-decoration: none;
-    padding-left: 8px;
-  }
-  
-  .header-arash::after {
-    content: "Arash Abdollahi";
-    position: absolute;
-    left: 0; /* Start the text outside the element */
-    white-space: nowrap; /* Prevent text wrapping */
-    transform: translateX(-150%); /* Slide the text from the left */
-    transition: transform 0.5s ease-in-out; /* Smoother transition */
-    opacity: 0; /* Initially hide the text */
-    color: black;
-    padding-left: 8px;
-  }
-  
-  .header-arash:hover::after {
-    transform: translateX(0); /* Slide the text to the original position */
-    opacity: 1; /* Show the text on hover */
-  }
-  
-  .header-arash:hover {
-    color: transparent; /* Make the original text invisible */
-  }
-  
-  .navbar .dropdown {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-  }
-  
-  .navbar .dropdown li {
-    padding-left: 28px;
-  }
-  
-  .navbar .dropdown li a {
-    display: flex;
-    text-decoration: none;
-  }
-  
-  .navbar .dropdown a{
-    position: relative;
-    display: inline-block;
-  }
-  
-  .navbar .dropdown a::before{
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: black;
-    transition: 0.3s;
-  }
-  
-  .navbar .dropdown a:hover::before {
-    width: 100%;
-  }
-  
-  .dropdown, .hamburger {
-    display: none;
-  }
-  
-  @media (max-width: 425px) {
-  
-    .hamburger {
-      display: block;
-      cursor: pointer;
-      position: relative; /* Added to position lines relative to this container */
-      width: 25px;
-      height: 15px; /* Adjusted to fit all lines */
-      z-index: 1;
-    }
-  
-    .hamburger-line {
-      display: block;
-      width: 100%;
-      height: 1px;
-      background-color: black;
-      position: absolute;
-      left: 0;
-      transition: all 0.3s ease; /* For a smooth transition effect */
-    }
-  
-    .hamburger-line:nth-child(1) { top: 0; }
-    .hamburger-line:nth-child(2) { top: 50%; transform: translateY(-50%); }
-    .hamburger-line:nth-child(3) { bottom: 0; }
-  
-    /* Rest of your existing CSS */
-    .navbar .dropdown {
-      display: none;
-    }
-  
-    .navbar .dropdown li {
-      display: block;
-      padding-left: 16px;
-    }
-  
-    .navbar .dropdown a::before {
-      display: none;
-    }
-  
-    .hamburger.active + .navbar .dropdown,
-    .navbar .dropdown.active {
-      display: block;
-    }
-  
-    .navbar {
-      position: relative; /* This makes sure the dropdown is positioned relative to navbar */
-    }
-  
-    .navbar .dropdown {
-      display: none;
-      position: absolute;
-      right: 0; /* Align to the right side */
-      top: 100%; /* Positioned below the hamburger menu */
-      background-color: #f8f9fa; /* Light grey background, change as needed */
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
-      border-radius: 4px; /* Optional: Rounds the corners */
-      min-width: 150px; /* Adjust as needed */
-      z-index: 2; /* Ensure it's above other content */
-    }
-  
-    .navbar .dropdown li {
-      display: block;
-      padding: 8px 16px; /* Adjust padding as needed */
-    }
-  
-    .navbar .dropdown li:hover {
-      background-color: #e9ecef; /* Optional: Change background on hover */
-    }
-  
-    .navbar .dropdown a {
-      color: black; /* Text color, change as needed */
-      text-decoration: none; /* Removes underline from links */
-    }
-  
-    .hamburger.active + .navbar .dropdown,
-    .navbar .dropdown.active {
-      display: block;
-    }
-  }
-
-.blog-div{
-        margin: 0px 80px;
+  /* Main Content */
+main {
+  padding: 20px;
 }
 
-.title{
-    text-align: center;
+.blog-div {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.main-text ul{
-    padding-left: 80px;
+.title {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #555;
 }
 
-.main-text ol{
-    padding-left: 80px;
+/* Paragraph Text */
+.para-text {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
-.bold-text{
-    font-weight: 700;
+/* Bold Text */
+.bold-text {
+  font-weight: bold;
 }
 
-.quote-text{
-    text-align: center;
+/* Quotes */
+.quote-text {
+  font-style: italic;
+  color: #888;
 }
 
-.JTBD-img{
-  display: flex;
-  justify-content: center;
-}
-
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.5em;
-    }
-
-    h2, h3 {
-        font-size: 1.2em;
-    }
+/* Images in Blog */
+.JTBD-img img {
+  width: 100%;
+  height: auto;
 }
