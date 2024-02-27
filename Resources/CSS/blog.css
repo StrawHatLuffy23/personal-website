@@ -107,7 +107,7 @@
     display: none;
   }
   
-  @media (max-width: 425px) {
+  @media (max-width: 570px) {
   
     .hamburger {
       display: block;
@@ -191,6 +191,7 @@
 
 .blog-page-grid{
     margin-top: 50px;
+
   }
   
   .JTBD {
@@ -207,11 +208,13 @@
     align-items: center; /* Center vertically */
     text-align: center;
     padding: 20px;
+    width: auto;
+    height: auto;
   }
   
   .JTBD a.JTBD-items {
-    width: 100px;    
-    height: 40px;    
+    width: auto;
+    height: auto; 
     padding: 5px 10px;
     font-size: 14px;  
     margin: auto; /* Centers the button within the flex container */
@@ -224,5 +227,38 @@
     font-size: 24px;
   }
   
-  
+  @media (max-width: 570px){
+    .JTBD {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      border-top: 1px solid #000000;  
+      border-bottom: 1px solid #000000;
+    }
+    
+    .JTBD-items {
+      display: flex; /* Apply Flexbox here */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      text-align: center;
+      padding: 5px;
+      width: auto;
+      height: auto;
+    }
+    
+    .JTBD a.JTBD-items {
+      width: auto;
+      height: auto; 
+      padding: 5px 5px;
+      font-size: 14px;  
+      margin: auto; /* Centers the button within the flex container */
+      text-decoration: underline;
+      cursor: pointer;
+      transition: font-size 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+    .JTBD a.JTBD-items:hover{
+      font-size: 24px;
+    }
+  }
   
