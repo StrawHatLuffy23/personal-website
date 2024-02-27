@@ -5,11 +5,16 @@
   color: black;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body{
   min-height: 100vh;
   background: #f3f3f3; /* Color of the MacOS background */
   margin: 0;
   padding: 20px;
+  box-sizing: content-box;
 }
 
 
@@ -360,10 +365,6 @@ main{
   from, to { border-color: transparent; }
   50% { border-color: black; }
 }
-
-
-
-
 
 .hoz-line{
   width: 100%;
